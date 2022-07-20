@@ -1,0 +1,209 @@
+Collection can store multiple values of dissimilar data type
+
+Collection is a pre-defined interface.(no logic because it is interface)
+It has three child list, set, queue. All three are three different interface. (no logic because it is interface)
+
+
+List has three child classes - Array list, Linked list and Vector list
+
+Set has three child classes - Hashset, linkedset, Treeset
+
+Iterable is super interface of collection
+
+
+Interface to interface is connected by extend keyword
+
+
+Interface to class is connected by implement keyword
+
+Collection comes under java.util package
+
+
+List - we can store multiple values of dissimilar datatypes
+
+
+1.Creating new list
+
+- Works based on Index
+- Allows duplicate
+- prints based on insertion order
+
+
+List li = mew Linkedlist();
+//Adding values in list 
+li.add(10);
+li.add("Arav");
+li.add('m')
+li.add(78.73);
+li.add(7264868532873672L)
+
+
+
+Generics in list used because functionality of array (using similar datatype) can also be done in list : 
+
+Generics restricts usage of dissimilar objects or allow only similar objects
+Feature introduced in 1.5 version
+Inside generics we need to pass only wrapper class
+
+
+
+List<Integer> li = new LinkedList<Integer>();
+(or)List<Integer> li = new LinkedList<>();
+
+
+
+Size of the list is calculated by : 
+int size = li.size();
+Sysot(size);
+
+
+li.get(index);
+
+li.indexOf(40);
+
+li.lastIndexOf(40);
+
+
+//add at particular index
+li.add(index,value)
+
+//replace 
+li.set(index,value)
+
+
+//remove
+li.remove(index) or li.remove(value)
+
+If both index and value are same values like 3 then it gives priority to index
+
+//clear
+li.clear()
+
+//create new list and copying from another list
+
+List<Integer> l2 = new Arraylist<>();
+l2.addAll(li);
+
+//is empty or not
+l2.isempty();
+
+l2.add(300);
+l2.add(300)
+l2.add(500)
+
+//equals or not
+l2.equals(li);
+
+
+//Get common values
+l2.retainAll(li); // if we print l2 then all common values will be printed
+
+
+//get all values
+Sysout(li.get(index)) or
+
+Sysout("Normal for loop")
+
+for(int i=0; i<li.size(); i++){
+
+    Integer interger2 = li.get(i);  //values are called only by Classes and not by datatype like int
+}
+
+
+Enhanced for loop
+
+for(Integer x:li)
+{
+  sysout(x);
+}
+
+for each method 
+
+li.forEach(Sys.out::println);
+
+
+
+
+Set :
+
+Properties : 
+1. Works based on values and not index
+2. Don't allow duplicates
+
+
+Child : 
+1. Hash (Random order)
+2.Linkedhash (Insertion order)
+3.Tree set (Ascending order)
+
+
+Set<Interger> s = new LinkedHashSet<>():
+s.add(49);
+s.add(54);
+s.add(25);
+s.add(32);
+s.add(80);
+s.add(25);
+s.add(54);
+
+
+int si = s.size();
+
+sys.out(si);
+
+//value present or not
+boolean y = s.contains(32);
+sys.out(y);
+
+//remove 
+s.remove(25);
+sys.out(s);
+
+//clear 
+s.clear();
+
+//enhanced for loop
+for(Interger x :s)
+{
+    Sys.out(s);
+}
+
+//foreach method 
+s.forEach(system.out::println)
+
+List<Integer> l3 = new Arraylist<>();
+
+
+
+l3.add(300);
+l3.add(300);
+l3.add(500);
+
+sys.out(l3);
+
+Set<Interger> s3 = new LinkedhashSet<>();
+
+
+s3.addAll(l3);
+
+sys.out(s3);
+
+
+//duplicate count 
+sys.out(l3.size() - s3.size());
+
+
+
+
+Set<Character> s4 = mew HashSet<>(); // Hashset random order
+Set<Interger> s3 = new LinkedhashSet<>(); // LinkedHashSet insertion order
+Set<Interger> s3 = new TreeSet<>(); // Ascending order
+
+For Ascending order which has multiple data types, the priority is given as space, special character, number, Upper case, Lowe case.
+It is printed based ASCII values
+
+
+
+
+
+
